@@ -15,6 +15,12 @@ public class DamageDealer : MonoBehaviour
      return _weapon;   
     }
 
+    public void Hit()
+    {
+        Destroy(gameObject);
+        
+    }
+
 
 
 }

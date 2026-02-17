@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 3481752626012481644}
   - component: {fileID: 6534068209053854731}
   - component: {fileID: 6937185862456451637}
-  m_Layer: 0
+  - component: {fileID: -6671371454603507889}
+  - component: {fileID: -8000146634107855895}
+  m_Layer: 6
   m_Name: ENM1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,6 +113,33 @@ CapsuleCollider2D:
   m_Offset: {x: 0.028177738, y: 0.0056355}
   m_Size: {x: 1.3453321, y: 2.1981783}
   m_Direction: 0
+--- !u!114 &-6671371454603507889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2860910287391542762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1c65c0c91dfae418c7234876e179c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageDealer
+  _Damage: 25
+  _weapon: Generic
+--- !u!114 &-8000146634107855895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2860910287391542762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d344d3087909fa408d6d183e0d8fe40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipStatus
+  _Health: 50
 --- !u!1 &4012111132155260499
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8647569526588128904}
   - component: {fileID: 3620024837487573706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
