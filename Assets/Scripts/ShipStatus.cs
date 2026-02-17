@@ -2,15 +2,35 @@ using UnityEngine;
 
 public class ShipStatus : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+[SerializeField] int _Health = 50;
+DamageDealer damageDealer;
+
+void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        damageDealer = collision.GetComponent<DamageDealer>();
+
+        if (damageDealer != null)
+        {
+            DoDamage(damageDealer.GetDamage());
+        }
+
+        ChecKLife();
+
+
+    }
+void  DoDamage(int damage){
+    _Health-= damage;
+}
+
+void ChecKLife()
+    {
+        if (_Health<=0) Destroy(gameObject);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
+
 }
