@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+   [SerializeField] int _Damage=10;
+   [SerializeField] string _weapon="Generic";
+
+   public int GetDamage()
     {
-        
+     return _Damage;   
     }
 
-    // Update is called once per frame
-    void Update()
+    public string GetWeapon()
     {
-        
+     return _weapon;   
     }
+
+
+
 }
