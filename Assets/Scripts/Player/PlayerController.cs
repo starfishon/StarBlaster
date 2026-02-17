@@ -18,9 +18,6 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-
-
-
         MovePlayer();
     }
     void InitBounds()
@@ -43,15 +40,17 @@ public class PlayerController : MonoBehaviour
       _MoveVector = _moveAction.ReadValue<Vector2>();
      //  transform.position+= new Vector3(_MoveVector.x,_MoveVector.y,0f);
      float _deltaTime = Time.deltaTime;
-     //float x =_PlayerMovementVector.x * _deltaTime * _ShipSpeed;
-     //float y =_PlayerMovementVector.y * _deltaTime * _ShipSpeed;
      Vector3 _newPose = transform.position + _MoveVector * _deltaTime * _ShipSpeed;
+
     float shipSize = 2;
     _newPose.x = Math.Clamp(_newPose.x,_minBounds.x+shipSize,_maxBounds.x-shipSize);
     _newPose.y = Math.Clamp(_newPose.y,_minBounds.y+shipSize,_maxBounds.y-shipSize);
 
 
+
+
      transform.position=  _newPose;
+
 
     }
        

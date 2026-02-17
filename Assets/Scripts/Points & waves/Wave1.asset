@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 2860910287391542762, guid: 7e4cab5016e2f0240a19d19d955bb963, type: 3}
   - {fileID: 671526906960266075, guid: 6457082753e290540959c342f3661a37, type: 3}
   - {fileID: 4378652221170439058, guid: f48d73d5c1f6f834aa85a2baaf0cc423, type: 3}
-  _enemyMove_speed: 5
+  _enemyMove_speed: 25
   _timeSpawn: 0.5
   _enemySpawnVariance: 0.1
   _miniSpawnTime: 0.3
