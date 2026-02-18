@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1c65c0c91dfae418c7234876e179c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageDealer
-  _Damage: 25
+  _Damage: 10
   _weapon: Generic
 --- !u!114 &-1883488031353405680
 MonoBehaviour:

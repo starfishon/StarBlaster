@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1c65c0c91dfae418c7234876e179c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageDealer
-  _Damage: 25
+  _Damage: 10
   _weapon: Generic
 --- !u!114 &435617427093173054
 MonoBehaviour:
@@ -230,4 +230,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d344d3087909fa408d6d183e0d8fe40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipStatus
-  _Health: 50
+  _Health: 100
