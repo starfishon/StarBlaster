@@ -10,15 +10,28 @@ public class PlayerController : MonoBehaviour
     Vector2 _PlayerMovementVector;
     Vector2 _minBounds;
     Vector2 _maxBounds;
+    shooter _PlayerShooter;
+    InputAction _fireAction;
+
 
     void Start()
     {
+        _PlayerShooter = GetComponent<shooter>();
+        _fireAction = InputSystem.actions.FindAction("Fire");
+
        _moveAction = InputSystem.actions.FindAction("Move");
        InitBounds();
+    }
+
+    void FireShooter()
+    {
+        _PlayerShooter.IsFring = _fireAction.IsPressed();
+
     }
     void Update()
     {
         MovePlayer();
+        FireShooter();
     }
     void InitBounds()
     {

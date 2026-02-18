@@ -8,7 +8,7 @@ DamageDealer damageDealer;
 
 void OnTriggerEnter2D(Collider2D collision)
     {
-        if (gameObject.layer == collision.gameObject.layer) return ;
+       // if (gameObject.layer == collision.gameObject.layer) return ;
         damageDealer = collision.GetComponent<DamageDealer>();
         Debug.Log("we got hit mayday");
 
