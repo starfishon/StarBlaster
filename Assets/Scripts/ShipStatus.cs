@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ShipStatus : MonoBehaviour
@@ -37,15 +38,38 @@ void ChecKLife()
 
     }
 
+IEnumerator FollowParticle(ParticleSystem ps, Transform target)
+{
+
+    while (ps != null)
+    {
+        ps.transform.position = target.position;
+        yield return null; // חשוב! מחכה לפריים הבא
+        
+    }
+    
+}
+private static Transform _projectilesRoot;
+
+    void Awake()
+    {
+        // יוצרים פעם אחת Root מסודר לכל היריות
+        if (_projectilesRoot == null)
+        {
+            var go = GameObject.Find("Particals");
+            if (go == null) go = new GameObject("Particals");
+            _projectilesRoot = go.transform;
+        }
+    }
+
 void GetHitPartical()
     {
         if (_hitPartical!=null){
-       ParticleSystem particalVerb = Instantiate(_hitPartical,transform.position,Quaternion.identity,transform);
-       Destroy(particalVerb,_hitPartical.main.duration+ _hitPartical.main.startLifetime.constantMax);
+       ParticleSystem particalVerb = Instantiate(_hitPartical,transform.position,Quaternion.identity,_projectilesRoot);
 
-   
-
-        }
+         StartCoroutine(FollowParticle(particalVerb, transform));
+       Destroy(particalVerb.gameObject,_hitPartical.main.duration+ _hitPartical.main.startLifetime.constantMax);
+         }
     }
 
 

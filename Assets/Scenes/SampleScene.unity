@@ -264,29 +264,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8518440048544492, guid: fd67a596dd2d3cc4e9f5aff4e1e50573, type: 3}
+      propertyPath: _movespeed.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518440048544492, guid: fd67a596dd2d3cc4e9f5aff4e1e50573, type: 3}
+      propertyPath: _movespeed.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2886998516179915986, guid: fd67a596dd2d3cc4e9f5aff4e1e50573, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.2661173
+      value: 1.1190714
       objectReference: {fileID: 0}
     - target: {fileID: 2886998516179915986, guid: fd67a596dd2d3cc4e9f5aff4e1e50573, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.1856349
+      value: 2.0720592
       objectReference: {fileID: 0}
     - target: {fileID: 2886998516179915986, guid: fd67a596dd2d3cc4e9f5aff4e1e50573, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.818
+      value: -0.4018
       objectReference: {fileID: 0}
     - target: {fileID: 2886998516179915986, guid: fd67a596dd2d3cc4e9f5aff4e1e50573, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7127
+      value: -0.501
       objectReference: {fileID: 0}
     - target: {fileID: 3822986501175874771, guid: fd67a596dd2d3cc4e9f5aff4e1e50573, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.36791727
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3822986501175874771, guid: fd67a596dd2d3cc4e9f5aff4e1e50573, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6363793
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3822986501175874771, guid: fd67a596dd2d3cc4e9f5aff4e1e50573, type: 3}
       propertyPath: m_LocalPosition.x
@@ -331,6 +339,14 @@ PrefabInstance:
     - target: {fileID: 7603623085818754407, guid: fd67a596dd2d3cc4e9f5aff4e1e50573, type: 3}
       propertyPath: m_Name
       value: Background (Base Layer)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560858680608178330, guid: fd67a596dd2d3cc4e9f5aff4e1e50573, type: 3}
+      propertyPath: _movespeed.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560858680608178330, guid: fd67a596dd2d3cc4e9f5aff4e1e50573, type: 3}
+      propertyPath: _movespeed.y
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

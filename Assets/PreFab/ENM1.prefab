@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::shooter
   _projectilePrefab: {fileID: 3665163500273937506, guid: a003d1329a49d2f468cf415fefe1fdaf, type: 3}
   _projeSpeed: 10
-  _projectLifeTime: 11
+  _projectLifeTime: 5
   _fireRate: 1
   useAI: 1
   _projectileParent: {fileID: 0}

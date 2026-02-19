@@ -8,7 +8,7 @@ public class shooter : MonoBehaviour
     [SerializeField] float _projectLifeTime;
     [SerializeField] float _fireRate;
     [SerializeField] bool useAI;
-    [SerializeField] private Transform _projectileParent;
+   // [SerializeField] private Transform _projectileParent;
 
     [HideInInspector] public bool _IsFiring;
     Coroutine fireCorotine;
@@ -38,8 +38,6 @@ public class shooter : MonoBehaviour
 
     void Start()
     {
-            Debug.Log($"ProjectileParent: {(_projectileParent ? _projectileParent.name : "NULL")}, " +
-              $"Scene: {(_projectileParent ? _projectileParent.gameObject.scene.name : "-")}");
     }
 
     void fire()
