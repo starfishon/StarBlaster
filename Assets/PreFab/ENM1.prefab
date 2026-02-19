@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipStatus
   _Health: 25
+  _hitPartical: {fileID: 8487027531082443549, guid: 88a9415491c2ba14d8d270e4e2b753d0, type: 3}
 --- !u!1 &4012111132155260499
 GameObject:
   m_ObjectHideFlags: 0

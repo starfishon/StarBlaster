@@ -4,6 +4,7 @@ public class ShipStatus : MonoBehaviour
 {
 
 [SerializeField] int _Health = 50;
+[SerializeField] ParticleSystem _hitPartical;
 DamageDealer damageDealer;
 
 void OnTriggerEnter2D(Collider2D collision)
@@ -16,6 +17,7 @@ void OnTriggerEnter2D(Collider2D collision)
         if (damageDealer != null)
         {
             DoDamage(damageDealer.GetDamage());
+            GetHitPartical();
             damageDealer.Hit();
         }
 
@@ -28,11 +30,20 @@ void  DoDamage(int damage){
 
 void ChecKLife()
     {
-       if (_Health<=0) Destroy(gameObject); 
+       if (_Health<=0) {
+        
+        Destroy(gameObject); 
+       }
 
     }
 
-
+void GetHitPartical()
+    {
+        if (_hitPartical!=null){
+       ParticleSystem particalVerb = Instantiate(_hitPartical,transform.position,Quaternion.identity);
+       Destroy(particalVerb,_hitPartical.main.duration+ _hitPartical.main.startLifetime.constantMax);
+        }
+    }
 
 
 
