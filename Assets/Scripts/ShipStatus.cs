@@ -42,6 +42,7 @@ void GetHitPartical()
         if (_hitPartical!=null){
        ParticleSystem particalVerb = Instantiate(_hitPartical,transform.position,Quaternion.identity);
        Destroy(particalVerb,_hitPartical.main.duration+ _hitPartical.main.startLifetime.constantMax);
+
         }
     }
 
