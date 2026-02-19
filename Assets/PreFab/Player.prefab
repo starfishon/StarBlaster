@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,17 +79,17 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 6e2fef2f9e24c6e41b513f376961dd73, type: 3}
+  m_Sprite: {fileID: 5307185714078801750, guid: 6e2fef2f9e24c6e41b513f376961dd73, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 3.59375, y: 3.6835938}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!1 &5858275854080832102
 GameObject:
@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: -7362703180049182821}
   - component: {fileID: 2414150212950563093}
   - component: {fileID: -6972537474591545621}
+  - component: {fileID: 4592888702757345266}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -232,8 +233,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Offset: {x: -0.13393143, y: 0.272954}
+  m_Size: {x: 0.76786286, y: 1.545908}
   m_Direction: 0
 --- !u!114 &-6972537474591545621
 MonoBehaviour:
@@ -248,3 +249,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipStatus
   _Health: 50
+--- !u!114 &4592888702757345266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858275854080832102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8909979c396a19e4fa42cc9e42370cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::shooter
+  _projectilePrefab: {fileID: 1737540958254555395, guid: 0d09b1ff82483924e865de94b69b20b6, type: 3}
+  _projeSpeed: 50
+  _projectLifeTime: 5
+  _fireRate: 0.1
+  useAI: 0
+  _projectileParent: {fileID: 0}
+  _IsFiring: 0
+  _TimeShoot: 1
+  _ShootVariance: 0
+  _miniShootTime: 0.2

@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     void FireShooter()
     {
-        _PlayerShooter.IsFring = _fireAction.IsPressed();
+        _PlayerShooter._IsFiring = _fireAction.IsPressed();
 
     }
     void Update()
