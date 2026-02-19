@@ -6,20 +6,30 @@ public class ShipStatus : MonoBehaviour
 
 [SerializeField] int _Health = 50;
 [SerializeField] ParticleSystem _hitPartical;
-DamageDealer damageDealer;
+[SerializeField] bool _applyCameraShake;
 
-void OnTriggerEnter2D(Collider2D collision)
+DamageDealer damageDealer;
+CameraShake _camera;
+    void Start()
+    {
+        _camera = Camera.main.GetComponent<CameraShake>();
+
+    }
+    void OnTriggerEnter2D(Collider2D collision)
     {
        // if (gameObject.layer == collision.gameObject.layer) return ;
         damageDealer = collision.GetComponent<DamageDealer>();
-        Debug.Log("we got hit mayday");
 
-        
         if (damageDealer != null)
         {
             DoDamage(damageDealer.GetDamage());
+            
             GetHitPartical();
             damageDealer.Hit();
+            if (_applyCameraShake)
+            {
+                _camera.play();
+            }
         }
 
     }

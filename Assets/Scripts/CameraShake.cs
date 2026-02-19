@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraShake : MonoBehaviour
@@ -7,6 +8,7 @@ public class CameraShake : MonoBehaviour
     [SerializeField] float _shaeDuration=0.5f;
     [SerializeField] float _shakeMagnitude = 0.5f;
     Vector3 _initialPosition;
+
 
 
     void Start()
@@ -18,11 +20,16 @@ public class CameraShake : MonoBehaviour
     {
         StartCoroutine(ShakeCamera());
     }
-    IEnumerator  ShakeCamera()
+    IEnumerator ShakeCamera()
     {
-       // transform.position = _initialPosition + Random.insideUnitCircle * _shakeMagnitude;
 
-        
-      return null;  
+      float _deltaTime =0;
+      while  (_deltaTime<=_shaeDuration){
+      _deltaTime += Time.deltaTime;
+      transform.position = _initialPosition + (Vector3)Random.insideUnitCircle * _shakeMagnitude;
+      yield return new WaitForEndOfFrame();
+      }
+      transform.position = _initialPosition;
+      
     }
 }

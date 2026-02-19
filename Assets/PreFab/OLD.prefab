@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 867542108377202293}
   - component: {fileID: 7735380931117865498}
   m_Layer: 0
-  m_Name: EnemySpwanerObj
+  m_Name: OLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
