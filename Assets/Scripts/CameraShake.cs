@@ -14,15 +14,14 @@ public class CameraShake : MonoBehaviour
         _initialPosition = transform.position;
     }
 
-    public void plary()
+    public void play()
     {
         StartCoroutine(ShakeCamera());
     }
     IEnumerator  ShakeCamera()
     {
-        transform.position = _initialPosition +
-        Random.insideUnitCircle * _shakeMagnitude;
-        
+       // transform.position = _initialPosition + Random.insideUnitCircle * _shakeMagnitude;
+
         
       return null;  
     }

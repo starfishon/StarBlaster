@@ -61,7 +61,6 @@ public class PlayerController : MonoBehaviour
 
 
 
-
      transform.position=  _newPose;
 
 
