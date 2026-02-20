@@ -16,6 +16,7 @@ AudioManager _audioManager;
 DamageDealer damageDealer;
 PlayerLife _playerlife;
 CameraShake _camera;
+MenuButtons  _menuButtons;
     void Start()
     {
         _playerlife = FindFirstObjectByType<PlayerLife>();
@@ -24,6 +25,7 @@ CameraShake _camera;
 
         _camera = Camera.main.GetComponent<CameraShake>();
         _audioManager = FindFirstObjectByType<AudioManager>();
+        _menuButtons = FindFirstObjectByType<MenuButtons>();
 
     }
     void OnTriggerEnter2D(Collider2D collision)
@@ -60,7 +62,17 @@ void ChecKLife()
        if (_Health<=0) {
         _audioManager.ExplodeSFX();
 
-        if (!_IsPlayer) _score.UpdateScore(GetComponent<DamageDealer>().GetScore());
+        if (_IsPlayer)
+            {
+                
+                _menuButtons.LoadGameOver();
+            }
+
+        else 
+        {
+            _score.UpdateScore(GetComponent<DamageDealer>().GetScore());
+        }
+
        
         Destroy(gameObject); 
        }

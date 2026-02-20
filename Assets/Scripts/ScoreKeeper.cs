@@ -1,9 +1,11 @@
 using UnityEngine;
 using TMPro;
 
+
 public class ScoreKeeper : MonoBehaviour
 {
-    [SerializeField] public TextMeshProUGUI scoreText;
+    
+    public static ScoreKeeper instance;
     int _score=0;
 
     public int GetScore()
@@ -14,7 +16,7 @@ public class ScoreKeeper : MonoBehaviour
     public void UpdateScore(int value)
     {
        _score +=value; 
-       scoreText.text = _score.ToString("00000000");
+
     }
 
     public void RestScore()
@@ -23,10 +25,22 @@ public class ScoreKeeper : MonoBehaviour
     }
 
 
-    void Start()
+    void Awake()
     {
-        RestScore();
-        
+      if (instance!=null)
+        {
+                Debug.Log("you destroyed me!!!");
+                gameObject.SetActive(false);
+                Destroy(gameObject);
+        }
+        else
+        {
+            Debug.Log("you DONT destroyed me!!!");
+          instance = this;
+          DontDestroyOnLoad(gameObject);
+        }
+        Debug.Log(GetScore() + " " + FindObjectsByType<ScoreKeeper>(FindObjectsSortMode.None).Length);
+      
     }
 
 

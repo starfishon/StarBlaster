@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,22 +6,34 @@ public class MenuButtons : MonoBehaviour
 {
     public void QuitGame()
     {
-#if UNITY_EDITOR
+        #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-#else
+        #else
         Application.Quit();
-#endif
+        #endif
     }
 
     public void MainMenuBack()
     {
+        Destroy(FindFirstObjectByType<ScoreKeeper>());
+        SceneManager.LoadScene("MainMenu");
+    }
 
-        SceneManager.LoadScene(0);
+    public void LoadGameOver()
+    {
+        StartCoroutine(WaitForload("EndGame"));
+    }
+
+    IEnumerator WaitForload(string scene)
+    {
+        
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(scene);
     }
 
     public void NewGame()
     {
-
+        Destroy(FindFirstObjectByType<ScoreKeeper>());
         SceneManager.LoadScene(1);
     }
 }

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da16a1fd90a034a83c3722b9cb9f7a, type: 3}
+  m_Name: Wav5
+  m_EditorClassIdentifier: Assembly-CSharp::WaveSO
+  _pathPrefab: {fileID: 2532873595935132321, guid: 803aafdc46701e943bf2b65099ca6148, type: 3}
+  _enemyPrefabs:
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  - {fileID: 6893827097022187976, guid: 301572b310154cc40a6768750d8dc2be, type: 3}
+  _enemyMove_speed: 15
+  _timeSpawn: 0.2
+  _enemySpawnVariance: 0.1
+  _miniSpawnTime: 0.1

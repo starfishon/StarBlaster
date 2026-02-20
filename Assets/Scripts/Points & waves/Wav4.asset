@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da16a1fd90a034a83c3722b9cb9f7a, type: 3}
+  m_Name: Wav4
+  m_EditorClassIdentifier: Assembly-CSharp::WaveSO
+  _pathPrefab: {fileID: 3463713762937792366, guid: 6a9cc4df68937134b9c2c2432ac7c653, type: 3}
+  _enemyPrefabs:
+  - {fileID: 1629338709731135639, guid: 1883c56326174344fac1626066b8d2da, type: 3}
+  - {fileID: 1629338709731135639, guid: 1883c56326174344fac1626066b8d2da, type: 3}
+  - {fileID: 1629338709731135639, guid: 1883c56326174344fac1626066b8d2da, type: 3}
+  - {fileID: 1629338709731135639, guid: 1883c56326174344fac1626066b8d2da, type: 3}
+  - {fileID: 1629338709731135639, guid: 1883c56326174344fac1626066b8d2da, type: 3}
+  _enemyMove_speed: 15
+  _timeSpawn: 1
+  _enemySpawnVariance: 0
+  _miniSpawnTime: 0.2
