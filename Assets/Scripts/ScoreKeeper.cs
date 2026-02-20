@@ -14,7 +14,7 @@ public class ScoreKeeper : MonoBehaviour
     public void UpdateScore(int value)
     {
        _score +=value; 
-       scoreText.text = _score.ToString();
+       scoreText.text = _score.ToString("00000000");
     }
 
     public void RestScore()

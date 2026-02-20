@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
     float shipSize = 2;
     _newPose.x = Math.Clamp(_newPose.x,_minBounds.x+shipSize,_maxBounds.x-shipSize);
-    _newPose.y = Math.Clamp(_newPose.y,_minBounds.y+shipSize,_maxBounds.y-shipSize);
+    _newPose.y = Math.Clamp(_newPose.y,_minBounds.y+shipSize*2,_maxBounds.y-shipSize);
 
 
 

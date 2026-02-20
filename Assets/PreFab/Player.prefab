@@ -77,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1141798901
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5307185714078801750, guid: 6e2fef2f9e24c6e41b513f376961dd73, type: 3}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 2414150212950563093}
   - component: {fileID: -6972537474591545621}
   - component: {fileID: 4592888702757345266}
-  - component: {fileID: 3747191648879763113}
+  - component: {fileID: 1935650667195259638}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipStatus
   _Health: 50
+  _IsPlayer: 1
   _hitPartical: {fileID: 8487027531082443549, guid: 88a9415491c2ba14d8d270e4e2b753d0, type: 3}
   _applyCameraShake: 1
 --- !u!114 &4592888702757345266
@@ -273,7 +274,7 @@ MonoBehaviour:
   _ShootVariance: 0
   _miniShootTime: 0.2
   _IsFiring: 0
---- !u!114 &3747191648879763113
+--- !u!114 &1935650667195259638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,7 +283,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5858275854080832102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 319fe3636211c5a4e8c03a206f0588f6, type: 3}
+  m_Script: {fileID: 11500000, guid: f3ae5e37a7d3e474fb238d68293b78e5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScoreKeeper
-  scoreText: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLife
+  _PlayerLife: {fileID: 0}
