@@ -6,6 +6,7 @@ public class Pathfinding : MonoBehaviour
     WaveSO _waveConfig;
     Transform[] _way_wayPoints;
     int _wayPointIndex=0;
+
     void Start()
     {
         enemySpawner = FindAnyObjectByType<EnemySpawner>();

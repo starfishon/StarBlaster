@@ -1,18 +1,29 @@
 using System.Collections;
 using UnityEngine;
-
+using UnityEngine.SocialPlatforms.Impl;
 public class ShipStatus : MonoBehaviour
 {
 
 [SerializeField] int _Health = 50;
+[SerializeField] bool _IsPlayer=false;
 [SerializeField] ParticleSystem _hitPartical;
 [SerializeField] bool _applyCameraShake;
 
+ScoreKeeper _score;
+
+AudioManager _audioManager;
+
 DamageDealer damageDealer;
+PlayerLife _playerlife;
 CameraShake _camera;
     void Start()
     {
+        _playerlife = FindFirstObjectByType<PlayerLife>();
+        if (_IsPlayer)  _playerlife.setLife(_Health);
+        _score = FindFirstObjectByType<ScoreKeeper>();
+
         _camera = Camera.main.GetComponent<CameraShake>();
+        _audioManager = FindFirstObjectByType<AudioManager>();
 
     }
     void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +36,7 @@ CameraShake _camera;
             DoDamage(damageDealer.GetDamage());
             
             GetHitPartical();
+            
             damageDealer.Hit();
             if (_applyCameraShake)
             {
@@ -34,15 +46,22 @@ CameraShake _camera;
 
     }
 void  DoDamage(int damage){
+    if (_IsPlayer) _playerlife.UpdateLife(damage,_Health);
     _Health-= damage;
+    
     ChecKLife();
     
 }
 
+
+
 void ChecKLife()
     {
        if (_Health<=0) {
-        
+        _audioManager.ExplodeSFX();
+
+        if (!_IsPlayer) _score.UpdateScore(GetComponent<DamageDealer>().GetScore());
+       
         Destroy(gameObject); 
        }
 
@@ -74,6 +93,7 @@ private static Transform _projectilesRoot;
 
 void GetHitPartical()
     {
+        _audioManager.PlayHiySFX();
         if (_hitPartical!=null){
        ParticleSystem particalVerb = Instantiate(_hitPartical,transform.position,Quaternion.identity,_projectilesRoot);
 

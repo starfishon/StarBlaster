@@ -113,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageDealer
   _Damage: 10
   _weapon: Generic
+  _score: 0
 --- !u!1 &5614647407038895519
 GameObject:
   m_ObjectHideFlags: 0

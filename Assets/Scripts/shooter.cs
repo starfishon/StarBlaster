@@ -8,8 +8,14 @@ public class shooter : MonoBehaviour
     [SerializeField] float _projectLifeTime;
     [SerializeField] float _fireRate;
     [SerializeField] bool useAI;
-   // [SerializeField] private Transform _projectileParent;
 
+    [Header("AI Section")]
+    [SerializeField] float _TimeShoot= 2f;
+    [SerializeField] float _ShootVariance=1f;
+    [SerializeField] float _miniShootTime=0.2f;
+
+    AudioManager _audioManager;
+    
     [HideInInspector] public bool _IsFiring;
     Coroutine fireCorotine;
 
@@ -25,6 +31,7 @@ public class shooter : MonoBehaviour
             if (go == null) go = new GameObject("Projectiles");
             _projectilesRoot = go.transform;
         }
+        
     }
 
     void Update()
@@ -38,6 +45,7 @@ public class shooter : MonoBehaviour
 
     void Start()
     {
+        _audioManager = FindFirstObjectByType<AudioManager>();
     }
 
     void fire()
@@ -50,21 +58,14 @@ public class shooter : MonoBehaviour
         {
             StopCoroutine(fireCorotine);
             fireCorotine = null;
-
         }
         
     }
-    [Header("AI Section")]
-    [SerializeField] float _TimeShoot= 2f;
-    [SerializeField] float _ShootVariance=1f;
-    [SerializeField] float _miniShootTime=0.2f;
-
 
     public float GetRandomEnemySpawnTime()
     {
         float shootTime = Random.Range(_TimeShoot - _ShootVariance,
         _TimeShoot + _ShootVariance);
-      //  Debug.Log(shootTime);
         shootTime = Mathf.Clamp(shootTime+_ShootVariance,_miniShootTime,float.MaxValue);
         return shootTime;
     }
@@ -78,6 +79,7 @@ public class shooter : MonoBehaviour
                 transform.position,
                 Quaternion.identity,_projectilesRoot);
                 Destroy(projectile,_projectLifeTime);
+            
 
             projectile.transform.rotation = transform.rotation;
             float currentFireRate;
@@ -87,14 +89,13 @@ public class shooter : MonoBehaviour
                 }
             else
             {
+               _audioManager.PlayShootingSFX();
                 currentFireRate = _fireRate;
             }
             Rigidbody2D projectRB = projectile.GetComponent<Rigidbody2D>();
-            //projectRB.linearVelocityY = _projeSpeed;
+
             projectRB.linearVelocity = transform.up * _projeSpeed;
             yield return new WaitForSeconds(currentFireRate);
         }
     }
-
-
 }

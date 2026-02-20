@@ -86,6 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageDealer
   _Damage: 25
   _weapon: Generic
+  _score: 0
 --- !u!50 &7614681299190611773
 Rigidbody2D:
   serializedVersion: 5

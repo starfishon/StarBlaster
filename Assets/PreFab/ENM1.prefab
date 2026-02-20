@@ -49,11 +49,10 @@ MonoBehaviour:
   _projectLifeTime: 5
   _fireRate: 1
   useAI: 1
-  _projectileParent: {fileID: 0}
-  _IsFiring: 0
   _TimeShoot: 1
   _ShootVariance: 2
   _miniShootTime: 0.5
+  _IsFiring: 0
 --- !u!1 &2860910287391542762
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageDealer
   _Damage: 10
   _weapon: Generic
+  _score: 10
 --- !u!114 &-8000146634107855895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShipStatus
   _Health: 25
   _hitPartical: {fileID: 8487027531082443549, guid: 88a9415491c2ba14d8d270e4e2b753d0, type: 3}
+  _applyCameraShake: 0
 --- !u!1 &4012111132155260499
 GameObject:
   m_ObjectHideFlags: 0

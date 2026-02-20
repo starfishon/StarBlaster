@@ -4,6 +4,8 @@ public class DamageDealer : MonoBehaviour
 {
    [SerializeField] int _Damage=10;
    [SerializeField] string _weapon="Generic";
+   [SerializeField] int  _score=10;
+
 
    public int GetDamage()
     {
@@ -17,7 +19,15 @@ public class DamageDealer : MonoBehaviour
 
     public void Hit()
     {
+
         Destroy(gameObject);
+        
+    }
+
+    public int GetScore()
+    {
+
+        return _score;
         
     }
 
